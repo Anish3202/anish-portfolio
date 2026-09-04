@@ -1,0 +1,95 @@
+import type { SkillCategory } from "../types/portfolio";
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: "backend",
+    name: "Backend",
+    description: "Enterprise backend architectures, high-performance APIs, and data access layers.",
+    skills: [
+      { name: "C#", featured: true },
+      { name: "ASP.NET Core", featured: true },
+      { name: ".NET 8", featured: true },
+      { name: ".NET Core" },
+      { name: ".NET Framework" },
+      { name: "Web API", featured: true },
+      { name: "REST APIs", featured: true },
+      { name: "Entity Framework Core", featured: true },
+      { name: "ADO.NET" },
+    ],
+  },
+  {
+    id: "frontend",
+    name: "Frontend",
+    description: "Modern, responsive, and type-safe client applications with fluid interactions.",
+    skills: [
+      { name: "React", featured: true },
+      { name: "TypeScript", featured: true },
+      { name: "JavaScript", featured: true },
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Vite", featured: true },
+      { name: "Tailwind CSS", featured: true },
+    ],
+  },
+  {
+    id: "databases",
+    name: "Databases",
+    description: "Relational modeling, indexing, query optimization, and transactional storage.",
+    skills: [
+      { name: "SQL Server", featured: true },
+      { name: "PostgreSQL", featured: true },
+      { name: "MySQL", featured: true },
+    ],
+  },
+  {
+    id: "auth-security",
+    name: "Auth & Security",
+    description: "Identity management, multi-tenant isolation, and secure authentication protocols.",
+    skills: [
+      { name: "JWT", featured: true },
+      { name: "Multi-Tenant Authorization", featured: true },
+      { name: "API Key Authentication" },
+      { name: "OTP-based Authentication", featured: true },
+    ],
+  },
+  {
+    id: "cloud-devops",
+    name: "Cloud & DevOps",
+    description: "Containerization, cloud infrastructure, and automated deployment strategies.",
+    skills: [
+      { name: "Azure", featured: true },
+      { name: "Kubernetes", featured: true },
+      { name: "Git", featured: true },
+      { name: "Environment-based Deployments" },
+    ],
+  },
+  {
+    id: "ai-tools",
+    name: "AI Tools",
+    description: "Modern AI systems and agents integrated into the software development lifecycle.",
+    skills: [
+      { name: "Claude", featured: true },
+      { name: "Cursor", featured: true },
+      { name: "GitHub Copilot", featured: true },
+      { name: "Google Antigravity", featured: true },
+      { name: "Perplexity Comet" },
+      { name: "Google Stitch" },
+      { name: "DeepSeek", featured: true },
+      { name: "Grok" },
+    ],
+  },
+  {
+    id: "integrations",
+    name: "Integrations & Tools",
+    description: "Enterprise third-party APIs, messaging platforms, and client state management.",
+    skills: [
+      { name: "WhatsApp Business API", featured: true },
+      { name: "Meta Cloud API", featured: true },
+      { name: "QR Code Generation/Validation" },
+      { name: "PDF Generation" },
+      { name: "TanStack Query", featured: true },
+      { name: "Zustand", featured: true },
+      { name: "Axios" },
+    ],
+  },
+];

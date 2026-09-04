@@ -1,0 +1,75 @@
+import type { ExperienceItem } from "../types/portfolio";
+
+export const experienceData: ExperienceItem[] = [
+  {
+    id: "magnusminds",
+    company: "MagnusMinds IT Solution",
+    role: "Software Engineer / Software Developer",
+    duration: "Present",
+    type: "Full-time",
+    location: "Ahmedabad, India",
+    technologies: [
+      ".NET",
+      "ASP.NET MVC",
+      ".NET Web API",
+      "React",
+      "SQL",
+      "REST APIs",
+      "Jira",
+      "AI-Assisted Development",
+      "Enterprise Systems",
+    ],
+    responsibilities: [
+      "Engineered and maintained backend APIs and micro-modules for multiple live enterprise applications using .NET, ASP.NET MVC, and Web API.",
+      "Developed high-performance frontend interfaces in React and integrated them with database-backed RESTful endpoints.",
+      "Optimized complex SQL queries and relational schemas to ensure dependable response times in data-intensive enterprise workloads.",
+      "Followed agile project lifecycles, sprint delivery, and ticket tracking via Jira.",
+      "Leveraged modern AI-assisted development workflows to accelerate code refactoring, test scaffolding, and system prototyping.",
+    ],
+    hackathon: {
+      badge: "AI HACKATHON",
+      award: "WINNER",
+      projectName: "CorpAdmin AI Agent — Payroll & Expense Intelligence",
+      description:
+        "Recognized as the AI Hackathon Winner for designing and developing an intelligent automated corporate administrative agent that delivers predictive intelligence, automated payroll checks, and expense analysis.",
+      impact: "Winner — MagnusMinds AI Hackathon",
+      technologies: ["AI Agents", ".NET Web API", "LLM Integration", "React", "SQL"],
+    },
+  },
+  {
+    id: "sapphire",
+    company: "Sapphire Software Solutions",
+    role: "Software Trainee Engineer / Intern",
+    duration: "2 Years",
+    type: "Internship / Trainee",
+    location: "Ahmedabad, India",
+    technologies: [
+      ".NET",
+      "C#",
+      "CRM Migration",
+      "Client Portals",
+      "Backend Development",
+      "Database Systems",
+      "SQL",
+    ],
+    responsibilities: [
+      "Contributed to full-cycle CRM migration initiatives, ensuring data integrity, schema consistency, and business logic preservation.",
+      "Built and maintained client portal modules, enabling enterprise customers to track requests, account records, and workflows.",
+      "Implemented backend services, business validation layers, and database interactions using .NET technologies.",
+      "Collaborated closely with senior engineers on debugging, code reviews, and production bug resolutions for database-driven software.",
+    ],
+  },
+  {
+    id: "maxgen",
+    company: "Maxgen Technologies",
+    role: "Intern",
+    duration: "Internship",
+    type: "Internship",
+    location: "Ahmedabad, India",
+    technologies: ["Python", "Backend Development", "Algorithms", "Data Processing"],
+    responsibilities: [
+      "Gained foundational software engineering and programming experience with Python development.",
+      "Implemented backend scripts, data manipulation routines, and core algorithmic problem solving.",
+    ],
+  },
+];
