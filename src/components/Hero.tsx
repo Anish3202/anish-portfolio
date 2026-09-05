@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 export const Hero: React.FC = () => {
   const [mouseCoord, setMouseCoord] = useState({ x: 0, y: 0 });
+  const [waveFrame, setWaveFrame] = useState(1);
+
+  // Smooth waving hand animation frame toggle loop
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWaveFrame((prev) => (prev === 1 ? 2 : 1));
+    }, 450);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
@@ -125,7 +134,7 @@ export const Hero: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Right Column: Custom 3D Waving Character */}
+        {/* Right Column: Custom Animated 3D Waving Character */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -135,23 +144,9 @@ export const Hero: React.FC = () => {
           {/* Subtle atmospheric backlighting behind character */}
           <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-gradient-to-tr from-sky-500/20 via-indigo-500/20 to-purple-500/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
-          {/* Interactive 'Hello! 👋' Animated Speech Bubble */}
+          {/* 3D Waving Character Image with live frame animation */}
           <motion.div
-            initial={{ opacity: 0, y: 15, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-            className="absolute top-2 left-4 z-20 bg-zinc-900/90 backdrop-blur-md border border-white/15 px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2"
-          >
-            <span className="text-xl animate-bounce">👋</span>
-            <div className="flex flex-col">
-              <span className="text-xs font-mono font-bold text-white tracking-wide">Hello!</span>
-              <span className="text-[10px] font-mono text-emerald-400">Welcome to my portfolio</span>
-            </div>
-          </motion.div>
-
-          {/* 3D Waving Character Image with floating & gentle sway motion */}
-          <motion.div
-            animate={{ y: [0, -10, 0], rotate: [0, 1, 0, -1, 0] }}
+            animate={{ y: [0, -8, 0] }}
             transition={{
               repeat: Infinity,
               duration: 5,
@@ -160,9 +155,9 @@ export const Hero: React.FC = () => {
             className="relative max-w-[340px] sm:max-w-[420px] lg:max-w-[480px] w-full"
           >
             <img
-              src="/anish-3d-waving.jpg"
-              alt="Anish Nair - 3D Waving Character"
-              className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)] filter brightness-[1.02]"
+              src={`/anish-wave-${waveFrame}.jpg`}
+              alt="Anish Nair - 3D Character Waving Hello"
+              className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)] filter brightness-[1.02] transition-opacity duration-200"
               loading="eager"
             />
           </motion.div>
