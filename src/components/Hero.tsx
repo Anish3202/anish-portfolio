@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 export const Hero: React.FC = () => {
   const [mouseCoord, setMouseCoord] = useState({ x: 0, y: 0 });
-  const [waveFrame, setWaveFrame] = useState(1);
-
-  // Smooth waving hand animation frame toggle loop
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setWaveFrame((prev) => (prev === 1 ? 2 : 1));
-    }, 450);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
@@ -134,7 +125,7 @@ export const Hero: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Right Column: Custom Animated 3D Waving Character */}
+        {/* Right Column: Custom 3D Character (Unboxed & Integrated Seamlessly) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -144,20 +135,20 @@ export const Hero: React.FC = () => {
           {/* Subtle atmospheric backlighting behind character */}
           <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-gradient-to-tr from-sky-500/20 via-indigo-500/20 to-purple-500/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
-          {/* 3D Waving Character Image with live frame animation */}
+          {/* 3D Character Image with floating motion */}
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{
               repeat: Infinity,
-              duration: 5,
+              duration: 6,
               ease: "easeInOut",
             }}
             className="relative max-w-[340px] sm:max-w-[420px] lg:max-w-[480px] w-full"
           >
             <img
-              src={`/anish-wave-${waveFrame}.jpg`}
-              alt="Anish Nair - 3D Character Waving Hello"
-              className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)] filter brightness-[1.02] transition-opacity duration-200"
+              src="/anish-3d-character.jpg"
+              alt="Anish Nair - 3D Character"
+              className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)] filter brightness-[1.02]"
               loading="eager"
             />
           </motion.div>
