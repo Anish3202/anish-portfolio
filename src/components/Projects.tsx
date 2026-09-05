@@ -15,7 +15,7 @@ export const Projects: React.FC = () => {
       {/* Section Header Tag */}
       <div className="flex items-center gap-3 mb-8">
         <span className="font-mono text-xs text-sky-400 font-semibold tracking-widest uppercase">
-          04 / FEATURED WORK & PROJECTS
+          04 / FEATURED PROJECTS
         </span>
         <div className="h-px bg-white/10 flex-1" />
       </div>
@@ -23,10 +23,10 @@ export const Projects: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
           <h2 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white uppercase leading-[0.95]">
-            SELECTED WORK
+            FEATURED PROJECTS
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg mt-4 max-w-2xl">
-            Select a project from the directory below to inspect its architecture, engineering highlights, and live deployments.
+            Select a project from the directory below to inspect its architecture, technical stack, and engineering highlights.
           </p>
         </div>
 
@@ -226,92 +226,6 @@ export const Projects: React.FC = () => {
 
 // Visual representation card for each project
 const ProjectVisualCard: React.FC<{ project: Project }> = ({ project }) => {
-  if (project.id === "bookmycuts") {
-    return (
-      <div className="rounded-2xl bg-[#090b10] border border-sky-500/20 p-5 font-mono text-xs text-zinc-300 shadow-xl space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-white font-semibold">BookMyCuts Platform Blueprint</span>
-          </div>
-          <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
-            Deployed on Vercel
-          </span>
-        </div>
-
-        <div className="space-y-2.5">
-          <div className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-between">
-            <span className="text-zinc-300">Vite 8 + React 19 Frontend</span>
-            <span className="text-sky-400 text-[10px]">Tailwind v4</span>
-          </div>
-          <div className="p-2.5 rounded-xl bg-sky-500/[0.04] border border-sky-500/20 flex items-center justify-between">
-            <span className="text-zinc-300">5-Step Client Booking Engine</span>
-            <span className="text-emerald-400 text-[10px]">Framer Motion</span>
-          </div>
-          <div className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-between">
-            <span className="text-zinc-300">Booking Reference Telemetry</span>
-            <span className="text-purple-300 text-[10px]">BMC-XXXXXX</span>
-          </div>
-        </div>
-
-        <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-zinc-400">
-          <span>Live Deployment</span>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-400 font-semibold hover:underline flex items-center gap-1"
-          >
-            bookmycuts-amber.vercel.app <ExternalLink className="w-3 h-3" />
-          </a>
-        </div>
-      </div>
-    );
-  }
-
-  if (project.id === "neo-tictactoe-ai") {
-    return (
-      <div className="rounded-2xl bg-[#090b10] border border-purple-500/20 p-5 font-mono text-xs text-zinc-300 shadow-xl space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse" />
-            <span className="text-white font-semibold">Cyberpunk AI Engine Architecture</span>
-          </div>
-          <span className="text-[10px] px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">
-            Deployed on Vercel
-          </span>
-        </div>
-
-        <div className="space-y-2.5">
-          <div className="p-2.5 rounded-xl bg-purple-500/[0.04] border border-purple-500/20 flex items-center justify-between">
-            <span className="text-zinc-300">Minimax Decision Tree Algorithm</span>
-            <span className="text-purple-300 text-[10px]">Unbeatable AI</span>
-          </div>
-          <div className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-between">
-            <span className="text-zinc-300">Procedural Sound Synthesizer</span>
-            <span className="text-sky-400 text-[10px]">Web Audio API</span>
-          </div>
-          <div className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-between">
-            <span className="text-zinc-300">Neon Particle Canvas & Glassmorphic UI</span>
-            <span className="text-emerald-400 text-[10px]">HTML5 Canvas</span>
-          </div>
-        </div>
-
-        <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-zinc-400">
-          <span>Live Deployment</span>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-purple-400 font-semibold hover:underline flex items-center gap-1"
-          >
-            cinematic-tictactoe.vercel.app <ExternalLink className="w-3 h-3" />
-          </a>
-        </div>
-      </div>
-    );
-  }
-
   if (project.id === "filmwale-premiere") {
     return (
       <div className="rounded-2xl bg-[#090b10] border border-sky-500/20 p-5 font-mono text-xs text-zinc-300 shadow-xl space-y-4">
@@ -422,4 +336,3 @@ const ProjectVisualCard: React.FC<{ project: Project }> = ({ project }) => {
     </div>
   );
 };
-

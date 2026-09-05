@@ -2,40 +2,8 @@ import type { Project } from "../types/portfolio";
 
 export const projectsData: Project[] = [
   {
-    id: "bookmycuts",
-    number: "01",
-    title: "BookMyCuts — Grooming Platform",
-    category: "Premium Haircut & Barber Booking Web App",
-    description:
-      "A modern, high-end grooming and haircut booking web application featuring interactive barber selection, multi-step appointment scheduling, real-time slot selection, and booking reference management.",
-    technologies: [
-      "React 19",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS v4",
-      "Framer Motion",
-      "React Router DOM",
-      "Lucide Icons",
-    ],
-    architecture: [
-      "Cinematic dark editorial UI system (#080808) with Manrope typography and custom cursor interactions",
-      "Multi-step client-side booking engine (Service → Barber → Date/Time → Confirmation) with instant validation",
-      "Local storage & dynamic state management for persistent booking reference generation (BMC-XXXXXX)",
-      "Responsive layout optimized for high-conversion booking workflows and Vercel edge deployment",
-    ],
-    highlights: [
-      "Cinematic Dark Aesthetic (#080808)",
-      "5-Step Interactive Booking Engine",
-      "Barber & Slot Availability Telemetry",
-      "Deployed on Vercel",
-    ],
-    githubUrl: "https://github.com/Anish3202/BookMyCuts",
-    liveUrl: "https://bookmycuts-amber.vercel.app",
-    featured: true,
-  },
-  {
     id: "filmwale-premiere",
-    number: "02",
+    number: "01",
     title: "FilmWale Premiere",
     category: "Enterprise Event Management CRM",
     description:
@@ -70,39 +38,8 @@ export const projectsData: Project[] = [
     featured: true,
   },
   {
-    id: "neo-tictactoe-ai",
-    number: "03",
-    title: "Neo-TicTacToe AI Engine",
-    category: "Cyberpunk AI Game Engine",
-    description:
-      "An interactive web game featuring an unbeatable Minimax AI engine with Alpha-Beta pruning, Web Audio API sound synthesis, dynamic canvas particles, and a transparent glassmorphic UI.",
-    technologies: [
-      "JavaScript / ES6+",
-      "Minimax AI Algorithm",
-      "HTML5 Canvas API",
-      "Web Audio API",
-      "CSS3 Glassmorphism",
-      "Vercel Edge",
-    ],
-    architecture: [
-      "Unbeatable Minimax AI algorithm evaluating 9-level deep game decision trees in sub-millisecond execution",
-      "Procedural audio sound synthesizer generated dynamically via Web Audio API without external media files",
-      "Real-time particle canvas engine triggering winning celebratory bursts matching player neon accents",
-      "Zero-dependency single-file architecture deployed instantly to Vercel production",
-    ],
-    highlights: [
-      "Unbeatable Minimax AI Engine",
-      "Web Audio API Sound Synthesizer",
-      "Glassmorphic Cyberpunk UI",
-      "Live Edge Deployment on Vercel",
-    ],
-    githubUrl: "https://github.com/Anish3202",
-    liveUrl: "https://cinematic-tictactoe.vercel.app",
-    featured: true,
-  },
-  {
     id: "tanyo-ticket-management",
-    number: "04",
+    number: "02",
     title: "Tanyo Ticket Management System",
     category: "Enterprise Support Platform",
     description:
@@ -133,7 +70,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "johnson-control",
-    number: "05",
+    number: "03",
     title: "Johnson Control Backend",
     category: "Enterprise Cloud Infrastructure",
     description:
@@ -165,7 +102,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "edcredu",
-    number: "06",
+    number: "04",
     title: "Edcredu Learning Platform",
     category: "Education Platform",
     description:
@@ -193,7 +130,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "fundraising-platform",
-    number: "07",
+    number: "05",
     title: "Fundraising & Recruitment System",
     category: "Recruitment / Fundraising Application",
     description:
@@ -219,4 +156,3 @@ export const projectsData: Project[] = [
     featured: true,
   },
 ];
-
